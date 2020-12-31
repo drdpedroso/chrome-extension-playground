@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .sidebar {
+            width: 70px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background-color: #363D47;
+        }
+        .wrapper {
+            z-index: 2147483645;
+            display: block;
+            width: 1200px;
+            height: 100%;
+            float: right;
+            position: static;
+        }
+        .clickable-overlay {
+            position: fixed;
+            background: rgb(29, 49, 58);
+            opacity: 0.7;
+            cursor: crosshair;
+            text-align: center;
+            transition: none 0s ease 0s;
+            top: 0px;
+            left: 0px;
+            width: calc(100vw - 70px);
+            height: 100vh;
+            z-index: 2147483646;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar"></div>
+    </div>
+    <div class="clickable-overlay">
+    </div>
+</body>
+</html>
