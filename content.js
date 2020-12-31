@@ -20,15 +20,19 @@ const setPins = (pins) => {
     })
 }
 
+
+
 const init = () => {
     const div = createElementFromHTML(`
         <div class="wrapper">
-            <div class="sidebar"></div>
+            <div class="sidebar">
+                <button id="btn"> + </button>
+            </div>
         </div>
     `)
 
     const div2 = createElementFromHTML(`
-        <div class="clickable-overlay" id="overlay"></div>
+        <div class="clickable-overlay" id="overlay" style="display: none"></div>
     `)
     document.body.appendChild(div)
     document.body.appendChild(div2)
@@ -42,13 +46,16 @@ const init = () => {
      return div.firstChild;
  }
 init()
-
- document.body.addEventListener('click', function clickEvent(e) {
-    const rect = e.target.getBoundingClientRect();
-    const x = e.pageX ; //x position within the element.
-    const y = e.pageY;  //y position within the element.
+//
+ document.getElementById('overlay').addEventListener('click', function clickEvent(e) {
+    const x = e.pageX;
+    const y = e.pageY;
 
     setState({
         pins: new Set([...state.pins, { x, y }])
     })
 }, true)
+
+ document.getElementById('btn').addEventListener('click', function clickEvent(e) {
+     document.getElementById('overlay').style.display = 'block'
+ }, true)
