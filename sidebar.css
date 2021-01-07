@@ -1,4 +1,4 @@
-.sidebar {
+.ext-sidebar {
     width: 70px;
     position: fixed;
     right: 0;
@@ -6,7 +6,7 @@
     height: 100%;
     background-color: #363D47;
 }
-.wrapper {
+.ext-wrapper {
     z-index: 2147483645;
     display: block;
     width: 1200px;
@@ -14,7 +14,7 @@
     float: right;
     position: static;
 }
-.clickable-overlay {
+.ext-clickable-overlay {
     position: fixed;
     background: rgb(29, 49, 58);
     opacity: 0.7;
@@ -27,4 +27,34 @@
     height: 100vh;
     z-index: 2147483646;
     display: block;
+}
+
+.ext-modal-overlay {
+    position: fixed;
+    background: rgba(29, 49, 58, 0.7);
+    text-align: center;
+    transition: none 0s ease 0s;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2147483646;
+    display: flex;
+}
+.ext-modal {
+    background: white;
+    position: relative;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 1px 0 rgba(0,0,0,0.05), 0 0 60px rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05), 0 1px 0 rgba(0,0,0,0.05), 0 0 60px rgba(0,0,0,0.3);
+    border-radius: 2px 2px 3px 3px;
+    overflow: visible;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 200;
+    margin: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
